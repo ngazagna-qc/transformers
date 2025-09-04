@@ -27,7 +27,7 @@ from .debug_utils import DebugOption, DebugUnderflowOverflow
 from .integrations.deepspeed import deepspeed_init, deepspeed_load_checkpoint
 from .integrations.tpu import tpu_spmd_dataloader
 from .modeling_utils import unwrap_model
-from .trainer import Trainer, TRAINER_STATE_NAME, _is_peft_model
+from .trainer import TRAINER_STATE_NAME, Trainer, _is_peft_model
 from .trainer_callback import ExportableState, TrainerState
 from .trainer_pt_utils import get_model_param_count
 from .trainer_utils import TrainOutput, speed_metrics
@@ -38,6 +38,7 @@ from .utils import (
     is_torch_xla_available,
     logging,
 )
+
 
 if is_accelerate_available():
     from accelerate import skip_first_batches
